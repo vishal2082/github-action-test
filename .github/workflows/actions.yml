@@ -2,8 +2,8 @@ name: Actions Workflow
 
 on: 
   schedule:
-    - cron: "0/5 * * *"
-    - cron: "0/6 * * *"
+    - cron: "0/2 * * *"
+    - cron: "0/3 * * *"
   # push
   pull_request:
     types: [closed, assigned, opened, reopened]
@@ -17,11 +17,3 @@ jobs:
         run: |
           pwd
           ls -a
-      - name: checkout
-        uses: vishal2082/github-action-test     
-      - name: Simple JS Action
-        id: greet
-        uses: actions/
-        hello-world-javascript-action@v1
-        with:
-          who-to-greet: john
